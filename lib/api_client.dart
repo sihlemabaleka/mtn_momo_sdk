@@ -18,7 +18,7 @@ class MTNMoMo {
   final _RegMap = new RegExp(r'^Map<String,(.*)>$');
 
   MTNMoMo({this.basePath: "https://sandbox.momodeveloper.mtn.com"}) {
-    // Setup authentications (key: authentication name, value: authentication).
+    // Setup authentications (key: authentication name, value: authentication)
     _authentications['apiKeyHeader'] =
         new ApiKeyAuth("header", "Ocp-Apim-Subscription-Key");
     _authentications['apiKeyQuery'] =

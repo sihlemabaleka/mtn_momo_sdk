@@ -32,4 +32,5 @@ part 'model/access_token_exception.dart';
 part 'model/transfer.dart';
 part 'model/transfer_result.dart';
 
+//Default client API
 MTNMoMo defaultApiClient = new MTNMoMo();

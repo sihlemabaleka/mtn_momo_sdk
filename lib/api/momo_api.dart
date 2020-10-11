@@ -6,7 +6,6 @@ class MTNMoMoAPI {
   MTNMoMoAPI([MTNMoMo apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   /// /v1_0/account/balance - GET
-  ///
   /// Get the balance of the account.
   Future<Balance> getAccountBalance(String xTargetEnvironment,
       {String authorization}) async {
