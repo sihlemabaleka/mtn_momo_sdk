@@ -25,8 +25,8 @@ class MTNMoMo {
         new ApiKeyAuth("query", "subscription-key");
   }
 
-  void addDefaultHeader(String key, String value) {
-    _defaultHeaderMap[key] = value;
+  void addSubscriptionKeyHeader({String subscriptionKey}) {
+    _defaultHeaderMap["Ocp-Apim-Subscription-Key"] = subscriptionKey;
   }
 
   dynamic _deserialize(dynamic value, String targetType) {
