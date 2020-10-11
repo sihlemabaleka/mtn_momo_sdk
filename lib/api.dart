@@ -14,7 +14,7 @@ part 'auth/oauth.dart';
 part 'auth/http_basic_auth.dart';
 
 part 'api/momo_api.dart';
-part 'model/api_user.dart';
+part 'model/momo_user.dart';
 part 'model/api_user_key_result.dart';
 part 'model/api_user_result.dart';
 part 'model/balance.dart';

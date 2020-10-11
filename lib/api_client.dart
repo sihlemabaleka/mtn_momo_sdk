@@ -41,11 +41,11 @@ class MTNMoMo {
         case 'double':
           return value is double ? value : double.parse('$value');
         case 'ApiUser':
-          return new ApiUser.fromJson(value);
+          return new MoMoUser.fromJson(value);
         case 'ApiUserKeyResult':
           return new ApiUserKeyResult.fromJson(value);
         case 'ApiUserResult':
-          return new ApiUserResult.fromJson(value);
+          return new MoMoUserResult.fromJson(value);
         case 'Balance':
           return new Balance.fromJson(value);
         case 'BooleanResult':
