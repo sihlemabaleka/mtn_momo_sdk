@@ -8,7 +8,7 @@ class MTNMoMoAPI {
   /// /v1_0/account/balance - GET
   ///
   /// Get the balance of the account.
-  Future<Balance> getV10AccountBalance(String xTargetEnvironment,
+  Future<Balance> getAccountBalance(String xTargetEnvironment,
       {String authorization}) async {
     Object postBody = null;
 
@@ -54,10 +54,8 @@ class MTNMoMoAPI {
   /// /v1_0/accountholder/{accountHolderIdType}/{accountHolderId}/active - GET
   ///
   /// Operation is used  to check if an account holder is registered and active in the system.
-  Future getV10AccountholderAccountholderidtypeAccountholderidActive(
-      String accountHolderId,
-      String accountHolderIdType,
-      String xTargetEnvironment,
+  Future getAccountActivityStatus(String accountHolderId,
+      String accountHolderIdType, String xTargetEnvironment,
       {String authorization}) async {
     Object postBody = null;
 
@@ -116,7 +114,7 @@ class MTNMoMoAPI {
   /// /v1_0/apiuser/{X-Reference-Id} - GET
   ///
   /// Used to get API user information.
-  Future getV10Apiuser(String xReferenceId) async {
+  Future getUser(String xReferenceId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -161,7 +159,7 @@ class MTNMoMoAPI {
   /// /apiuser - POST
   ///
   /// Used to create an API user in the sandbox target environment.
-  Future postV10Apiuser(String xReferenceId, {ApiUser body}) async {
+  Future createUser(String xReferenceId, {ApiUser body}) async {
     Object postBody = body;
 
     // verify required params are set
@@ -205,7 +203,7 @@ class MTNMoMoAPI {
   /// /v1_0/apiuser/{X-Reference-Id}/apikey - POST
   ///
   /// Used to create an API key for an API user in the sandbox target environment.
-  Future<ApiUserKeyResult> postV10ApiuserApikey(String xReferenceId) async {
+  Future<ApiUserKeyResult> createUserAPIKey(String xReferenceId) async {
     Object postBody = null;
 
     // verify required params are set
@@ -251,7 +249,7 @@ class MTNMoMoAPI {
   /// /requesttopay - POST
   ///
   /// This operation is used to request a payment from a consumer (Payer). The payer will be asked to authorize the payment. The transaction will be executed once the payer has authorized the payment. The requesttopay will be in status PENDING until the transaction is authorized or declined by the payer or it is timed out by the system.   Status of the transaction can be validated by using the GET /requesttopay/\\&lt;resourceId\\&gt;
-  Future requesttopayPOST(String xReferenceId, String xTargetEnvironment,
+  Future requestToPay(String xReferenceId, String xTargetEnvironment,
       {RequestToPay body, String authorization, String xCallbackUrl}) async {
     Object postBody = body;
 
@@ -302,9 +300,10 @@ class MTNMoMoAPI {
   /// /requesttopay/{referenceId} - GET
   ///
   /// This operation is used to get the status of a request to pay. X-Reference-Id that was passed in the post is used as reference to the request.
-  Future<RequestToPayResult> requesttopayReferenceIdGET(
-      String referenceId, String xTargetEnvironment,
-      {String authorization}) async {
+  Future<RequestToPayResult> getPaymentStatus(
+      {String referenceId,
+      String xTargetEnvironment,
+      String authorization}) async {
     Object postBody = null;
 
     // verify required params are set
