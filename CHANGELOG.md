@@ -10,3 +10,9 @@
 - Modified API Client to explicitly accept subscription Key
 - Updated library package endpoints
 - Updated readme to match API classes and endpoints
+
+1.0.1
+- Fixed endpoints and started revision of the ReadMe
+- Merge pull request #1 from sihlemabaleka/add-license-1
+- Create LICENSE
+- Pubspec modified
