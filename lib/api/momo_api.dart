@@ -159,7 +159,7 @@ class MTNMoMoAPI {
   /// /apiuser - POST
   ///
   /// Used to create an API user in the sandbox target environment.
-  Future createUser(String xReferenceId, {ApiUser body}) async {
+  Future createUser(String xReferenceId, {MoMoUser body}) async {
     Object postBody = body;
 
     // verify required params are set
@@ -400,8 +400,12 @@ class MTNMoMoAPI {
   /// /transfer - POST
   ///
   /// Transfer operation is used to transfer an amount from the own account to a payee account.&lt;br&gt; Status of the transaction can validated by using the GET /transfer/\\{referenceId\\}
-  Future transferPOST(String xReferenceId, String xTargetEnvironment,
-      {Transfer body, String authorization, String xCallbackUrl}) async {
+  Future requestTransfer(
+      {String xReferenceId,
+      String xTargetEnvironment,
+      Transfer body,
+      String authorization,
+      String xCallbackUrl}) async {
     Object postBody = body;
 
     // verify required params are set
