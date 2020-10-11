@@ -1,8 +1,8 @@
-# swagger.api.DefaultApi
+# mtn_momo.api.DefaultApi
 
 ## Load the API package
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 ```
 
 All URIs are relative to *https://sandbox.momodeveloper.mtn.com*
@@ -29,7 +29,7 @@ Get the balance of the account.
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var xTargetEnvironment = xTargetEnvironment_example; // String | The identifier of the EWP system where the transaction shall be processed. This parameter is used to route the request to the EWP system that will initiate the transaction.
@@ -74,7 +74,7 @@ Operation is used  to check if an account holder is registered and active in the
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var accountHolderId = accountHolderId_example; // String | The party number. Validated according to the party ID type (case Sensitive). <br> msisdn - Mobile Number validated according to ITU-T E.164. Validated with IsMSISDN<br> email - Validated to be a valid e-mail format. Validated with IsEmail<br> party_code - UUID of the party. Validated with IsUuid
@@ -122,7 +122,7 @@ Used to get API user information.
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var xReferenceId = xReferenceId_example; // String | Format - UUID. Recource ID for the API user to be created. UUID version 4 is required.
@@ -164,7 +164,7 @@ Used to create an API user in the sandbox target environment.
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var xReferenceId = xReferenceId_example; // String | Format - UUID. Recource ID for the API user to be created. UUID version 4 is required.
@@ -208,7 +208,7 @@ Used to create an API key for an API user in the sandbox target environment.
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var xReferenceId = xReferenceId_example; // String | Format - UUID. Recource ID for the API user to be created. UUID version 4 is required.
@@ -251,7 +251,7 @@ This operation is used to request a payment from a consumer (Payer). The payer w
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var xReferenceId = xReferenceId_example; // String | Format - UUID. Recource ID of the created request to pay transaction. This ID is used, for example, validating the status of the request. ‘Universal Unique ID’ for the transaction generated using UUID version 4.
@@ -301,7 +301,7 @@ This operation is used to get the status of a request to pay. X-Reference-Id tha
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var referenceId = referenceId_example; // String | UUID of transaction to get result. Reference id  used when creating the request to pay.
@@ -348,7 +348,7 @@ This operation is used to create an access token which can then be used to autho
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var authorization = authorization_example; // String | Basic authentication header containing API user ID and API key. Should be sent in as B64 encoded.
@@ -391,7 +391,7 @@ Transfer operation is used to transfer an amount from the own account to a payee
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var xReferenceId = xReferenceId_example; // String | Format - UUID. Recource ID of the created request to pay transaction. This ID is used, for example validating the status of the request. ‘Universal Unique ID’ for the transaction generated using UUID version 4.
@@ -441,7 +441,7 @@ This operation is used to get the status of a transfer. X-Reference-Id that was 
 
 ### Example
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 
 var api_instance = new DefaultApi();
 var referenceId = referenceId_example; // String | UUID of transaction to get result. Reference id  used when creating the request to pay.

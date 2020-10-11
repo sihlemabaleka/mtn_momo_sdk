@@ -1,0 +1,12 @@
+1.0.0
+- Pubspec modified
+- Final setup
+- Final setup
+- Modified endpoints
+- Modified API methods for even further clarity
+- Modified API methods for further clarity
+- Modified API methods for further clarity
+- Modified API methods for clarity
+- Modified API Client to explicitly accept subscription Key
+- Updated library package endpoints
+- Updated readme to match API classes and endpoints

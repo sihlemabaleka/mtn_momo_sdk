@@ -454,7 +454,7 @@ class MTNMoMoAPI {
   /// /transfer/{referenceId} - GET
   ///
   /// This operation is used to get the status of a transfer. X-Reference-Id that was passed in the post is used as reference to the request.
-  Future<TransferResult> transferReferenceIdGET(
+  Future<TransferResult> getTransferStatus(
       String referenceId, String xTargetEnvironment,
       {String authorization}) async {
     Object postBody = null;

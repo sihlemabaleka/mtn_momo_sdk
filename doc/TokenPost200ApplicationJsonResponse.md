@@ -1,8 +1,8 @@
-# swagger.model.TokenPost200ApplicationJsonResponse
+# mtn_momo.model.TokenPost200ApplicationJsonResponse
 
 ## Load the model package
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 ```
 
 ## Properties

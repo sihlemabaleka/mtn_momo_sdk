@@ -1,8 +1,8 @@
-# swagger.model.PreApproval1
+# mtn_momo.model.PreApproval
 
 ## Load the model package
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 ```
 
 ## Properties

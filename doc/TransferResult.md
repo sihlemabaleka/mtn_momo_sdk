@@ -1,8 +1,8 @@
-# swagger.model.TransferResult1
+# mtn_momo.model.TransferResult
 
 ## Load the model package
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 ```
 
 ## Properties
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **payerMessage** | **String** | Message that will be written in the payer transaction history message field. | [optional] [default to null]
 **payeeNote** | **String** | Message that will be written in the payee transaction history note field. | [optional] [default to null]
 **status** | **String** |  | [optional] [default to null]
-**reason** | [**ErrorReason2**](ErrorReason2.md) |  | [optional] [default to null]
+**reason** | [**ErrorReason1**](ErrorReason1.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

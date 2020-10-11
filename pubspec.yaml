@@ -1,7 +1,7 @@
 name: mtn_momo
-version: 1.0.0
+version: 1.0.1
 description: MTN MoMo SDK API client
-
+homepage: http://fromtheinternet.co.za
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

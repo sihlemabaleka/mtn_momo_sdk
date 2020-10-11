@@ -1,8 +1,8 @@
-# swagger.model.Party
+# mtn_momo.model.Party
 
 ## Load the model package
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 ```
 
 ## Properties

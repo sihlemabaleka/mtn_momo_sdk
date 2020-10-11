@@ -1,8 +1,8 @@
-# swagger.model.ApiUserResult
+# mtn_momo.model.ApiUserResult
 
 ## Load the model package
 ```dart
-import 'package:swagger/api.dart';
+import 'package:mtn_momo/api.dart';
 ```
 
 ## Properties

@@ -9,7 +9,7 @@ class QueryParam {
 
 class MTNMoMo {
   String basePath;
-  var client = new BrowserClient();
+  var client = new IOClient();
 
   Map<String, String> _defaultHeaderMap = {};
   Map<String, Authentication> _authentications = {};

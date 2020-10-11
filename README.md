@@ -37,6 +37,8 @@ TODO
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
+Create user, create key and create token with each transaction
+
 ```dart
 import 'package:mtn_momo/api.dart';
 
@@ -45,7 +47,7 @@ var xTargetEnvironment = xTargetEnvironment_example; // String | The identifier 
 var authorization = authorization_example; // String | Authorization header used for Basic authentication and oauth. Format of the header parameter follows the standard for Basic and Bearer. Oauth uses Bearer authentication type where the credential is the received access token.
 
 try {
-    var result = api_instance.getV10AccountBalance(xTargetEnvironment, authorization);
+    var result = api_instance.getAccountBalance(xTargetEnvironment, authorization);
     print(result);
 } catch (e) {
     print("Exception when calling MTNMoMoAPI->getV10AccountBalance: $e\n");
@@ -58,51 +60,36 @@ All URIs are relative to *https://sandbox.momodeveloper.mtn.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*MTNMoMoAPI* | [**getV10AccountBalance**](docs//MTNMoMoAPI.md#getv10accountbalance) | **GET** /v1_0/account/balance | /v1_0/account/balance - GET
-*MTNMoMoAPI* | [**getV10AccountholderAccountholderidtypeAccountholderidActive**](docs//MTNMoMoAPI.md#getv10accountholderaccountholderidtypeaccountholderidactive) | **GET** /v1_0/accountholder/{accountHolderIdType}/{accountHolderId}/active | /v1_0/accountholder/{accountHolderIdType}/{accountHolderId}/active - GET
-*MTNMoMoAPI* | [**getV10Apiuser**](docs//MTNMoMoAPI.md#getv10apiuser) | **GET** /v1_0/apiuser/{X-Reference-Id} | /v1_0/apiuser/{X-Reference-Id} - GET
-*MTNMoMoAPI* | [**postV10Apiuser**](docs//MTNMoMoAPI.md#postv10apiuser) | **POST** /v1_0/apiuser | /apiuser - POST
-*MTNMoMoAPI* | [**postV10ApiuserApikey**](docs//MTNMoMoAPI.md#postv10apiuserapikey) | **POST** /v1_0/apiuser/{X-Reference-Id}/apikey | /v1_0/apiuser/{X-Reference-Id}/apikey - POST
-*MTNMoMoAPI* | [**requesttopayPOST**](docs//MTNMoMoAPI.md#requesttopaypost) | **POST** /v1_0/requesttopay | /requesttopay - POST
-*MTNMoMoAPI* | [**requesttopayReferenceIdGET**](docs//MTNMoMoAPI.md#requesttopayreferenceidget) | **GET** /v1_0/requesttopay/{referenceId} | /requesttopay/{referenceId} - GET
-*MTNMoMoAPI* | [**tokenPOST**](docs//MTNMoMoAPI.md#tokenpost) | **POST** /token/ | /token - POST
-*MTNMoMoAPI* | [**transferPOST**](docs//MTNMoMoAPI.md#transferpost) | **POST** /v1_0/transfer | /transfer - POST
-*MTNMoMoAPI* | [**transferReferenceIdGET**](docs//MTNMoMoAPI.md#transferreferenceidget) | **GET** /v1_0/transfer/{referenceId} | /transfer/{referenceId} - GET
+*MTNMoMoAPI* | [**getAccountBalance**](doc//MTNMoMoAPI.md#getv10accountbalance) | **GET** /v1_0/account/balance | /v1_0/account/balance - GET
+*MTNMoMoAPI* | [**getAccountActivityStatus**](doc//MTNMoMoAPI.md#getv10accountholderaccountholderidtypeaccountholderidactive) | **GET** /v1_0/accountholder/{accountHolderIdType}/{accountHolderId}/active | /v1_0/accountholder/{accountHolderIdType}/{accountHolderId}/active - GET
+*MTNMoMoAPI* | [**getUser**](doc//MTNMoMoAPI.md#getv10apiuser) | **GET** /v1_0/apiuser/{X-Reference-Id} | /v1_0/apiuser/{X-Reference-Id} - GET
+*MTNMoMoAPI* | [**createUser**](doc//MTNMoMoAPI.md#postv10apiuser) | **POST** /v1_0/apiuser | /apiuser - POST
+*MTNMoMoAPI* | [**createUserAPIKey**](doc//MTNMoMoAPI.md#postv10apiuserapikey) | **POST** /v1_0/apiuser/{X-Reference-Id}/apikey | /v1_0/apiuser/{X-Reference-Id}/apikey - POST
+*MTNMoMoAPI* | [**requestToPay**](doc//MTNMoMoAPI.md#requesttopaypost) | **POST** /v1_0/requesttopay | /requesttopay - POST
+*MTNMoMoAPI* | [**getPaymentStatus**](doc//MTNMoMoAPI.md#requesttopayreferenceidget) | **GET** /v1_0/requesttopay/{referenceId} | /requesttopay/{referenceId} - GET
+*MTNMoMoAPI* | [**createToken**](doc//MTNMoMoAPI.md#tokenpost) | **POST** /token/ | /token - POST
+*MTNMoMoAPI* | [**requestTransfer**](doc//MTNMoMoAPI.md#transferpost) | **POST** /v1_0/transfer | /transfer - POST
+*MTNMoMoAPI* | [**getTransactionStatus**](doc//MTNMoMoAPI.md#transferreferenceidget) | **GET** /v1_0/transfer/{referenceId} | /transfer/{referenceId} - GET
 
 ## Documentation For Models
 
- - [ApiUser](docs//ApiUser.md)
- - [ApiUserKeyResult](docs//ApiUserKeyResult.md)
- - [ApiUserResult](docs//ApiUserResult.md)
- - [Balance](docs//Balance.md)
- - [BooleanResult](docs//BooleanResult.md)
- - [ErrorReason](docs//ErrorReason.md)
- - [ErrorReason1](docs//ErrorReason1.md)
- - [ErrorReason2](docs//ErrorReason2.md)
- - [ErrorReason3](docs//ErrorReason3.md)
- - [Party](docs//Party.md)
- - [PaymentServerUrl](docs//PaymentServerUrl.md)
- - [PreApproval](docs//PreApproval.md)
- - [PreApproval1](docs//PreApproval1.md)
- - [PreApproval2](docs//PreApproval2.md)
- - [PreApprovalResult](docs//PreApprovalResult.md)
- - [PreApprovalResult1](docs//PreApprovalResult1.md)
- - [PreApprovalResult2](docs//PreApprovalResult2.md)
- - [RequestToPay](docs//RequestToPay.md)
- - [RequestToPay1](docs//RequestToPay1.md)
- - [RequestToPay2](docs//RequestToPay2.md)
- - [RequestToPayResult](docs//RequestToPayResult.md)
- - [RequestToPayResult1](docs//RequestToPayResult1.md)
- - [RequestToPayResult2](docs//RequestToPayResult2.md)
- - [TargetEnvironment](docs//TargetEnvironment.md)
- - [TokenPost200ApplicationJsonResponse](docs//TokenPost200ApplicationJsonResponse.md)
- - [TokenPost401ApplicationJsonResponse](docs//TokenPost401ApplicationJsonResponse.md)
- - [Transfer](docs//Transfer.md)
- - [Transfer1](docs//Transfer1.md)
- - [Transfer2](docs//Transfer2.md)
- - [TransferResult](docs//TransferResult.md)
- - [TransferResult1](docs//TransferResult1.md)
- - [TransferResult2](docs//TransferResult2.md)
+ - [MoMoUser](doc//ApiUser.md)
+ - [ApiUserKeyResult](doc//ApiUserKeyResult.md)
+ - [ApiUserResult](doc//ApiUserResult.md)
+ - [Balance](doc//Balance.md)
+ - [BooleanResult](doc//BooleanResult.md)
+ - [ErrorReason](doc//ErrorReason.md)
+ - [Party](doc//Party.md)
+ - [PaymentServerUrl](doc//PaymentServerUrl.md)
+ - [PreApproval](doc//PreApproval.md)
+ - [PreApprovalResult](doc//PreApprovalResult.md)
+ - [RequestToPay](doc//RequestToPay.md)
+ - [RequestToPayResult](doc//RequestToPayResult.md)
+ - [TargetEnvironment](doc//TargetEnvironment.md)
+ - [MoMoAccessToken](doc//TokenPost200ApplicationJsonResponse.md)
+ - [TokenPost401ApplicationJsonResponse](doc//TokenPost401ApplicationJsonResponse.md)
+ - [Transfer](doc//Transfer.md)
+ - [TransferResult](doc//TransferResult.md)
 
 ## Documentation For Authorization
 
