@@ -1,4 +1,4 @@
-part of swagger.api;
+part of mtn_momo.api;
 
 class TokenPost200ApplicationJsonResponse {
   /* A JWT token which can be used to authrize against the other API end-points. The format of the token follows the JWT standard format (see jwt.io for an example). This is the token that should be sent in in the Authorization header when calling the other API end-points. */

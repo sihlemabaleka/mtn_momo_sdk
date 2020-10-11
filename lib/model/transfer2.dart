@@ -1,4 +1,4 @@
-part of swagger.api;
+part of mtn_momo.api;
 
 class Transfer2 {
   /* Amount that will be debited from the payer account. */
@@ -39,17 +39,21 @@ class Transfer2 {
       'payee': payee,
       'payerMessage': payerMessage,
       'payeeNote': payeeNote
-     };
+    };
   }
 
   static List<Transfer2> listFromJson(List<dynamic> json) {
-    return json == null ? new List<Transfer2>() : json.map((value) => new Transfer2.fromJson(value)).toList();
+    return json == null
+        ? new List<Transfer2>()
+        : json.map((value) => new Transfer2.fromJson(value)).toList();
   }
 
-  static Map<String, Transfer2> mapFromJson(Map<String, Map<String, dynamic>> json) {
+  static Map<String, Transfer2> mapFromJson(
+      Map<String, Map<String, dynamic>> json) {
     var map = new Map<String, Transfer2>();
     if (json != null && json.length > 0) {
-      json.forEach((String key, Map<String, dynamic> value) => map[key] = new Transfer2.fromJson(value));
+      json.forEach((String key, Map<String, dynamic> value) =>
+          map[key] = new Transfer2.fromJson(value));
     }
     return map;
   }

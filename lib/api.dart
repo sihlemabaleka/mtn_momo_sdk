@@ -1,4 +1,4 @@
-library swagger.api;
+library mtn_momo.api;
 
 import 'dart:async';
 import 'dart:convert';

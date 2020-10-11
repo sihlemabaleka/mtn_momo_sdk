@@ -1,4 +1,4 @@
-part of swagger.api;
+part of mtn_momo.api;
 
 class RequestToPayResult {
   /* Amount that will be debited from the payer account. */

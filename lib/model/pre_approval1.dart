@@ -1,4 +1,4 @@
-part of swagger.api;
+part of mtn_momo.api;
 
 class PreApproval1 {
   

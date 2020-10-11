@@ -1,4 +1,4 @@
-part of swagger.api;
+part of mtn_momo.api;
 
 class ApiException implements Exception {
   int code = 0;
