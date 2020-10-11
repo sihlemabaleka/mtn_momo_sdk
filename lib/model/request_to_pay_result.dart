@@ -19,7 +19,7 @@ class RequestToPayResult {
   String status = null;
   //enum statusEnum {  PENDING,  SUCCESSFUL,  FAILED,  };
 
-  ErrorReason1 reason = null;
+  ErrorReason reason = null;
 
   RequestToPayResult();
 
@@ -38,7 +38,7 @@ class RequestToPayResult {
     payerMessage = json['payerMessage'];
     payeeNote = json['payeeNote'];
     status = json['status'];
-    reason = new ErrorReason1.fromJson(json['reason']);
+    reason = new ErrorReason.fromJson(json['reason']);
   }
 
   Map<String, dynamic> toJson() {
@@ -52,17 +52,21 @@ class RequestToPayResult {
       'payeeNote': payeeNote,
       'status': status,
       'reason': reason
-     };
+    };
   }
 
   static List<RequestToPayResult> listFromJson(List<dynamic> json) {
-    return json == null ? new List<RequestToPayResult>() : json.map((value) => new RequestToPayResult.fromJson(value)).toList();
+    return json == null
+        ? new List<RequestToPayResult>()
+        : json.map((value) => new RequestToPayResult.fromJson(value)).toList();
   }
 
-  static Map<String, RequestToPayResult> mapFromJson(Map<String, Map<String, dynamic>> json) {
+  static Map<String, RequestToPayResult> mapFromJson(
+      Map<String, Map<String, dynamic>> json) {
     var map = new Map<String, RequestToPayResult>();
     if (json != null && json.length > 0) {
-      json.forEach((String key, Map<String, dynamic> value) => map[key] = new RequestToPayResult.fromJson(value));
+      json.forEach((String key, Map<String, dynamic> value) =>
+          map[key] = new RequestToPayResult.fromJson(value));
     }
     return map;
   }

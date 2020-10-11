@@ -13,7 +13,7 @@ class PreApprovalResult {
   String status = null;
   //enum statusEnum {  PENDING,  SUCCESSFUL,  FAILED,  };
 
-  ErrorReason1 reason = null;
+  ErrorReason reason = null;
 
   PreApprovalResult();
 
@@ -29,7 +29,7 @@ class PreApprovalResult {
     payerMessage = json['payerMessage'];
     validityTime = json['validityTime'];
     status = json['status'];
-    reason = new ErrorReason1.fromJson(json['reason']);
+    reason = new ErrorReason.fromJson(json['reason']);
   }
 
   Map<String, dynamic> toJson() {

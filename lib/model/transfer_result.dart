@@ -19,7 +19,7 @@ class TransferResult {
   String status = null;
   //enum statusEnum {  PENDING,  SUCCESSFUL,  FAILED,  };
 
-  ErrorReason1 reason = null;
+  ErrorReason reason = null;
 
   TransferResult();
 
@@ -38,7 +38,7 @@ class TransferResult {
     payerMessage = json['payerMessage'];
     payeeNote = json['payeeNote'];
     status = json['status'];
-    reason = new ErrorReason1.fromJson(json['reason']);
+    reason = new ErrorReason.fromJson(json['reason']);
   }
 
   Map<String, dynamic> toJson() {

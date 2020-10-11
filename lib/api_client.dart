@@ -52,58 +52,28 @@ class MTNMoMo {
           return new BooleanResult.fromJson(value);
         case 'ErrorReason':
           return new ErrorReason.fromJson(value);
-        case 'ErrorReason1':
-          return new ErrorReason1.fromJson(value);
-        case 'ErrorReason2':
-          return new ErrorReason2.fromJson(value);
-        case 'ErrorReason3':
-          return new ErrorReason3.fromJson(value);
         case 'Party':
           return new Party.fromJson(value);
         case 'PaymentServerUrl':
           return new PaymentServerUrl.fromJson(value);
         case 'PreApproval':
           return new PreApproval.fromJson(value);
-        case 'PreApproval1':
-          return new PreApproval1.fromJson(value);
-        case 'PreApproval2':
-          return new PreApproval2.fromJson(value);
         case 'PreApprovalResult':
           return new PreApprovalResult.fromJson(value);
-        case 'PreApprovalResult1':
-          return new PreApprovalResult1.fromJson(value);
-        case 'PreApprovalResult2':
-          return new PreApprovalResult2.fromJson(value);
         case 'RequestToPay':
           return new RequestToPay.fromJson(value);
-        case 'RequestToPay1':
-          return new RequestToPay1.fromJson(value);
-        case 'RequestToPay2':
-          return new RequestToPay2.fromJson(value);
         case 'RequestToPayResult':
           return new RequestToPayResult.fromJson(value);
-        case 'RequestToPayResult1':
-          return new RequestToPayResult1.fromJson(value);
-        case 'RequestToPayResult2':
-          return new RequestToPayResult2.fromJson(value);
         case 'TargetEnvironment':
           return new TargetEnvironment.fromJson(value);
         case 'TokenPost200ApplicationJsonResponse':
-          return new TokenPost200ApplicationJsonResponse.fromJson(value);
+          return new MoMoAccessToken.fromJson(value);
         case 'TokenPost401ApplicationJsonResponse':
-          return new TokenPost401ApplicationJsonResponse.fromJson(value);
+          return new AccessTokenException.fromJson(value);
         case 'Transfer':
           return new Transfer.fromJson(value);
-        case 'Transfer1':
-          return new Transfer1.fromJson(value);
-        case 'Transfer2':
-          return new Transfer2.fromJson(value);
         case 'TransferResult':
           return new TransferResult.fromJson(value);
-        case 'TransferResult1':
-          return new TransferResult1.fromJson(value);
-        case 'TransferResult2':
-          return new TransferResult2.fromJson(value);
         default:
           {
             Match match;

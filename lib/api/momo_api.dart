@@ -354,8 +354,7 @@ class MTNMoMoAPI {
   /// /token - POST
   ///
   /// This operation is used to create an access token which can then be used to authorize and authenticate towards the other end-points of the API.
-  Future<TokenPost200ApplicationJsonResponse> tokenPOST(
-      String authorization) async {
+  Future<MoMoAccessToken> createToken({String authorization}) async {
     Object postBody = null;
 
     // verify required params are set
@@ -392,7 +391,7 @@ class MTNMoMoAPI {
     } else if (response.body != null) {
       return apiClient.deserialize(
               response.body, 'TokenPost200ApplicationJsonResponse')
-          as TokenPost200ApplicationJsonResponse;
+          as MoMoAccessToken;
     } else {
       return null;
     }
@@ -402,7 +401,7 @@ class MTNMoMoAPI {
   ///
   /// Transfer operation is used to transfer an amount from the own account to a payee account.&lt;br&gt; Status of the transaction can validated by using the GET /transfer/\\{referenceId\\}
   Future transferPOST(String xReferenceId, String xTargetEnvironment,
-      {Transfer2 body, String authorization, String xCallbackUrl}) async {
+      {Transfer body, String authorization, String xCallbackUrl}) async {
     Object postBody = body;
 
     // verify required params are set
@@ -452,7 +451,7 @@ class MTNMoMoAPI {
   /// /transfer/{referenceId} - GET
   ///
   /// This operation is used to get the status of a transfer. X-Reference-Id that was passed in the post is used as reference to the request.
-  Future<TransferResult1> transferReferenceIdGET(
+  Future<TransferResult> transferReferenceIdGET(
       String referenceId, String xTargetEnvironment,
       {String authorization}) async {
     Object postBody = null;
@@ -496,7 +495,7 @@ class MTNMoMoAPI {
       throw new ApiException(response.statusCode, response.body);
     } else if (response.body != null) {
       return apiClient.deserialize(response.body, 'TransferResult1')
-          as TransferResult1;
+          as TransferResult;
     } else {
       return null;
     }
